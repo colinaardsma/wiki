@@ -184,10 +184,11 @@ class EditPage(Handler):
         self.render_edit()
 
 class WikiPage(Handler):
-    def render_wiki(self):
-        self.write("wiki")
+    def render_wiki(self, url=""):
+        if url in Wiki:
+            self.write("wiki")
 
-    def get(self):
+    def get(self, url=""):
         self.render_wiki()
 
 # PAGE_RE = r'(/(?:[a-zA-Z0-9_-]+/?)*)'
