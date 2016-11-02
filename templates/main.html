@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>tFBPs</title>
+    <link type="text/css" rel="stylesheet" href="/styles/normalize.css" />
+    <link type="text/css" rel="stylesheet" href="/styles/styles.css" />
+    <table>
+      <tr>
+        <td>
+          <form action="/">
+            <button>home</button>
+          </form>
+        </td>
+        <td>
+          <form action="/fpprojb">
+            <button>Fantasy Pros Batter Projections</button>
+          </form>
+        </td>
+        <td>
+          <form action="/fpprojp">
+            <button>Fantasy Pros Pitcher Projections</button>
+          </form>
+        </td>
+        <td>
+          <form action="/blog">
+            <button>blog</button>
+          </form>
+        </td>
+        <td>
+          <form action="/admin">
+            <button>admin</button>
+          </form>
+        </td>
+      {%- if user %}
+        <td>
+          <p>{{user}}<a href="/logout"> (logout)</a></p>
+        </td>
+      {%- else %}
+        <td>
+          <form action="/login">
+            <button>login</button>
+          </form>
+        </td>
+      {%- endif %}
+      </tr>
+    </table>
+    <h2 style="margin: 1pt">tfbps</h2>
+    <hr style="margin-top: 5pt">
+  </head>
+  <body>
+    {%- block content %}
+    {%- endblock %}
+  </body>
+  <footer>
+    <!-- <hr> -->
+    <!-- <table width=100%>
+      <tr>
+        <td><h3><a href="/archive">archive</a></h3></td>
+        <td style="text-align: center"><h3><a href="/map">map</a></h3></td>
+        <td style="text-align: right"><h3><a href="/modify_post">modify</a></h3></td>
+      </tr>
+    </table> -->
+  </footer>
+</html>
